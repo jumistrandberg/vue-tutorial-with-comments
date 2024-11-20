@@ -10,6 +10,7 @@ import ModuleStyle from "./components/ModuleStyle.vue";
 import ReactiveComponent from "./components/ReactiveComponent.vue";
 import RefComponent from "./components/RefComponent.vue";
 import ComputedProperties from "./components/ComputedProperties.vue";
+import ConditionalRendering from "./components/ConditionalRendering.vue";
 </script>
 
 <template>
@@ -24,6 +25,7 @@ import ComputedProperties from "./components/ComputedProperties.vue";
   <ReactiveComponent /> 
   <RefComponent />
   <ComputedProperties />
+  <ConditionalRendering />
 </template>
 
 <style scoped></style>
