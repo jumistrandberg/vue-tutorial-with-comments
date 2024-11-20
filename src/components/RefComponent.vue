@@ -1,11 +1,13 @@
 <!-- ref is used to create a reactive reference to a value -->
 
 <script setup>
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 let count = ref(0);
 let username = ref("");
 let users = ref(['Michael', 'HuXun', 'Sophia']);
 let userInfo = ref({ name: 'Alex', age: 3000, location: ['USA', 'My head'], isMarried: false });
+// Reactive with ref 
+let friends = reactive([ref("Friend"), ref("Friend2")]);
 </script>
 
 <template>
@@ -21,4 +23,7 @@ let userInfo = ref({ name: 'Alex', age: 3000, location: ['USA', 'My head'], isMa
 
   <h3>User info: {{ userInfo }}</h3>
   <button @click="userInfo.isMarried = true">Marry</button>
+
+  <h2>Friends: {{ friends }}</h2>
+  <button @click="friends[0] = '🌝'">Happi</button>
 </template>
