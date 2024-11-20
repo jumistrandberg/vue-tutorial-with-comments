@@ -8,6 +8,7 @@ import LocalStyle from "./components/LocalStyle.vue";
 import CombinedStyle from "./components/CombinedStyle.vue";
 import ModuleStyle from "./components/ModuleStyle.vue";
 import ReactiveComponent from "./components/ReactiveComponent.vue";
+import RefComponent from "./components/RefComponent.vue";
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import ReactiveComponent from "./components/ReactiveComponent.vue";
   <CombinedStyle />
   <ModuleStyle />
   <ReactiveComponent /> 
+  <RefComponent />
 </template>
 
 <style scoped></style>
