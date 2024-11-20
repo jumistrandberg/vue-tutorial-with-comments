@@ -9,6 +9,7 @@ import CombinedStyle from "./components/CombinedStyle.vue";
 import ModuleStyle from "./components/ModuleStyle.vue";
 import ReactiveComponent from "./components/ReactiveComponent.vue";
 import RefComponent from "./components/RefComponent.vue";
+import ComputedProperties from "./components/ComputedProperties.vue";
 </script>
 
 <template>
@@ -22,6 +23,7 @@ import RefComponent from "./components/RefComponent.vue";
   <ModuleStyle />
   <ReactiveComponent /> 
   <RefComponent />
+  <ComputedProperties />
 </template>
 
 <style scoped></style>
