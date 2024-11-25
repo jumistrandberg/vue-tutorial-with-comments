@@ -13,6 +13,8 @@ import ComputedProperties from "./components/ComputedProperties.vue";
 import ConditionalRendering from "./components/ConditionalRendering.vue";
 import IterationComponent from "./components/IterationComponent.vue";
 import CounterComponent from "./components/CounterComponent.vue";
+import GettingDataWithFetch from "./components/GettingDataWithFetch.vue";
+import GettingDataWithAxios from "./components/GettingDataWithAxios.vue";
 
 </script>
 
@@ -31,6 +33,8 @@ import CounterComponent from "./components/CounterComponent.vue";
   <ConditionalRendering />
   <IterationComponent />
   <CounterComponent />  
+  <GettingDataWithFetch />
+  <GettingDataWithAxios />  
   
 </template>
 
