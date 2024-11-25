@@ -6,7 +6,7 @@
 // const Increment = () => counter.value++;
 // const Decrement = () => counter.value--;
 
-import { useCounter } from "../../shared/useCounter.js";
+import { useCounter } from "../shared/useCounter.js";
 // Create an instance of the composable
 const counter = useCounter();
 </script>
