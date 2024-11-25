@@ -12,6 +12,8 @@ import RefComponent from "./components/RefComponent.vue";
 import ComputedProperties from "./components/ComputedProperties.vue";
 import ConditionalRendering from "./components/ConditionalRendering.vue";
 import IterationComponent from "./components/IterationComponent.vue";
+import CounterComponent from "./components/Composables/CounterComponent.vue";
+import YetAnotherComponent from "./components/Composables/YetAnotherComponent.vue";
 
 </script>
 
@@ -29,6 +31,9 @@ import IterationComponent from "./components/IterationComponent.vue";
   <ComputedProperties />
   <ConditionalRendering />
   <IterationComponent />
+  <CounterComponent />  
+  <YetAnotherComponent />
+  
 </template>
 
 <style scoped></style>
