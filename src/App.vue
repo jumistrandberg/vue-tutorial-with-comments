@@ -11,6 +11,8 @@ import ReactiveComponent from "./components/ReactiveComponent.vue";
 import RefComponent from "./components/RefComponent.vue";
 import ComputedProperties from "./components/ComputedProperties.vue";
 import ConditionalRendering from "./components/ConditionalRendering.vue";
+import IterationComponent from "./components/IterationComponent.vue";
+
 </script>
 
 <template>
@@ -26,6 +28,7 @@ import ConditionalRendering from "./components/ConditionalRendering.vue";
   <RefComponent />
   <ComputedProperties />
   <ConditionalRendering />
+  <IterationComponent />
 </template>
 
 <style scoped></style>
