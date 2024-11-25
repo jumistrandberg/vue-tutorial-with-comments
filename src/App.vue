@@ -13,7 +13,6 @@ import ComputedProperties from "./components/ComputedProperties.vue";
 import ConditionalRendering from "./components/ConditionalRendering.vue";
 import IterationComponent from "./components/IterationComponent.vue";
 import CounterComponent from "./components/CounterComponent.vue";
-import YetAnotherComponent from "./components/Composables/YetAnotherComponent.vue";
 
 </script>
 
@@ -32,7 +31,6 @@ import YetAnotherComponent from "./components/Composables/YetAnotherComponent.vu
   <ConditionalRendering />
   <IterationComponent />
   <CounterComponent />  
-  <YetAnotherComponent />
   
 </template>
 
