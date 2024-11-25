@@ -1,4 +1,9 @@
 <script setup>
+// For dynamic props
+import { ref } from "vue";
+const firstName = ref("Bajs");
+const lastName = ref("Korv");
+
 // Import inside script setup
 import HelloWorld from "./components/HelloWorld.vue";
 import MyComponent from "./components/MyComponent.vue";
@@ -15,7 +20,11 @@ import IterationComponent from "./components/IterationComponent.vue";
 import CounterComponent from "./components/CounterComponent.vue";
 import GettingDataWithFetch from "./components/GettingDataWithFetch.vue";
 import GettingDataWithAxios from "./components/GettingDataWithAxios.vue";
-
+import StaticPropsComponent from "./components/StaticPropsComponent.vue";
+import DynamicPropComponent from "./components/DynamicPropComponent.vue";
+import PropValidation from "./components/PropValidation.vue";
+import ComplexProps from "./components/ComplexProps.vue";
+import CustomValidator from "./components/CustomValidator.vue";
 </script>
 
 <template>
@@ -27,15 +36,24 @@ import GettingDataWithAxios from "./components/GettingDataWithAxios.vue";
   <LocalStyle />
   <CombinedStyle />
   <ModuleStyle />
-  <ReactiveComponent /> 
+  <ReactiveComponent />
   <RefComponent />
   <ComputedProperties />
   <ConditionalRendering />
   <IterationComponent />
-  <CounterComponent />  
+  <CounterComponent />
   <GettingDataWithFetch />
-  <GettingDataWithAxios />  
-  
+  <GettingDataWithAxios />
+  <!-- Writing a prop  -->
+  <static-props-component name="Jordan" />
+  <!-- Use v-bind to pass a dynamic prop from the parent component -->
+  <dynamic-prop-component :firstName="firstName" :lastName="lastName" />
+  <prop-validation fullName="Jordan Korv" :age="25" />
+  <complex-props
+    :friends="['Alex', 'Bajs', 'Jane']"
+    :userInfo="{ name: 'Jordan', age: 25, location: ['Earth', 'Mars'] }"
+  />
+  <custom-validator name="Britta" :age="8" password="123456" />
 </template>
 
 <style scoped></style>
