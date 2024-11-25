@@ -1,6 +1,7 @@
 <!-- CSS modules generate unique class names for each component. This is useful for scoping styles to a component. -->
 <template>
   <!-- Kebab case -->
+   <!-- Have to use single quotes for the class name  -->
   <h1 v-bind:class="$style['module-style']">Using module CSS with $ syntax</h1>
 
   <!-- Camel case  -->
