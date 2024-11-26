@@ -4,6 +4,16 @@ import { ref } from "vue";
 const firstName = ref("Bajs");
 const lastName = ref("Korv");
 
+// For component event
+let count = ref(0);
+
+// Handler function for the form
+const formHandler = (username, email, password) => {
+  console.log("username: ", username);
+  console.log("email: ", email);
+  console.log("password: ", password);
+};
+
 // Import inside script setup
 import HelloWorld from "./components/HelloWorld.vue";
 import MyComponent from "./components/MyComponent.vue";
@@ -25,6 +35,8 @@ import DynamicPropComponent from "./components/DynamicPropComponent.vue";
 import PropValidation from "./components/PropValidation.vue";
 import ComplexProps from "./components/ComplexProps.vue";
 import CustomValidator from "./components/CustomValidator.vue";
+import ComponentEvent from "./components/ComponentEvent.vue";
+import FromComponentEvent from "./components/FromComponentEvent.vue";
 </script>
 
 <template>
@@ -54,6 +66,12 @@ import CustomValidator from "./components/CustomValidator.vue";
     :userInfo="{ name: 'Jordan', age: 25, location: ['Earth', 'Mars'] }"
   />
   <custom-validator name="Britta" :age="8" password="123456" />
+  <!-- For component event -->
+  <!-- Run the incrementCounter when the child component emits the event. -->
+  <component-event @incrementCounter="count++" />
+  <!-- The parent component is app.vue-->
+  <h1>Count: {{ count }}</h1>
+  <from-component-event @submitForm="formHandler" />
 </template>
 
 <style scoped></style>
