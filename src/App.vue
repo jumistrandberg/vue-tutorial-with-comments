@@ -37,6 +37,10 @@ import ComplexProps from "./components/ComplexProps.vue";
 import CustomValidator from "./components/CustomValidator.vue";
 import ComponentEvent from "./components/ComponentEvent.vue";
 import FromComponentEvent from "./components/FromComponentEvent.vue";
+import SlotComponent from "./components/SlotComponent.vue";
+import FallbackContent from "./components/FallbackContent.vue";
+import NamedSlot from "./components/NamedSlot.vue";
+import DefaultSlot from "./components/DefaultSlot.vue";
 </script>
 
 <template>
@@ -72,6 +76,26 @@ import FromComponentEvent from "./components/FromComponentEvent.vue";
   <!-- The parent component is app.vue-->
   <h1>Count: {{ count }}</h1>
   <from-component-event @submitForm="formHandler" />
+  <!-- How to call a slot component- needs opening and closing tag -->
+  <SlotComponent>
+    <!-- Here we can put content that will be displayed in the slot. -->
+    <h1>Slot content</h1>
+  </SlotComponent>
+  <FallbackContent>
+    <p>Fallback will not work because I am providing content in the slot.</p>
+  </FallbackContent>
+  <NamedSlot>
+    <!-- Either v-slot:name or #name can be used to call a slot component. -->
+    <template v-slot:one>
+      <h3>This content will go to slot 1</h3>
+    </template>
+    <template #two>
+      <h3>This content will go to slot 2</h3>
+    </template>
+  </NamedSlot>
+  <DefaultSlot #default>
+    <h3>This content will go to the default slot</h3>
+  </DefaultSlot>
 </template>
 
 <style scoped></style>
