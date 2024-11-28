@@ -45,6 +45,9 @@ import FallbackContent from "./components/FallbackContent.vue";
 import NamedSlot from "./components/NamedSlot.vue";
 import DefaultSlot from "./components/DefaultSlot.vue";
 import LifecycleComponent from "./components/LifecycleComponent.vue";
+import BasicWatcher from "./components/BasicWatcher.vue";
+import ReactiveObject from "./components/ReactiveObject.vue";
+import MultipleSources from "./components/MultipleSources.vue";
 </script>
 
 <template>
@@ -102,6 +105,9 @@ import LifecycleComponent from "./components/LifecycleComponent.vue";
   </DefaultSlot>
   <LifecycleComponent v-if="showHide" />
   <button @click="showHide = !showHide">Show / Hide</button>
+  <BasicWatcher />
+  <ReactiveObject />
+  <MultipleSources />
 </template>
 
 <style scoped></style>
