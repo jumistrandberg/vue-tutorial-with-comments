@@ -14,6 +14,9 @@ const formHandler = (username, email, password) => {
   console.log("password: ", password);
 };
 
+// For unmounting a component
+const showHide = ref(true);
+
 // Import inside script setup
 import HelloWorld from "./components/HelloWorld.vue";
 import MyComponent from "./components/MyComponent.vue";
@@ -41,6 +44,7 @@ import SlotComponent from "./components/SlotComponent.vue";
 import FallbackContent from "./components/FallbackContent.vue";
 import NamedSlot from "./components/NamedSlot.vue";
 import DefaultSlot from "./components/DefaultSlot.vue";
+import LifecycleComponent from "./components/LifecycleComponent.vue";
 </script>
 
 <template>
@@ -96,6 +100,8 @@ import DefaultSlot from "./components/DefaultSlot.vue";
   <DefaultSlot #default>
     <h3>This content will go to the default slot</h3>
   </DefaultSlot>
+  <LifecycleComponent v-if="showHide" />
+  <button @click="showHide = !showHide">Show / Hide</button>
 </template>
 
 <style scoped></style>
