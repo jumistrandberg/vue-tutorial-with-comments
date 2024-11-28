@@ -48,6 +48,9 @@ import LifecycleComponent from "./components/LifecycleComponent.vue";
 import BasicWatcher from "./components/BasicWatcher.vue";
 import ReactiveObject from "./components/ReactiveObject.vue";
 import MultipleSources from "./components/MultipleSources.vue";
+import BasicRef from "./components/BasicRef.vue";
+import FunctionRef from "./components/FunctionRef.vue";
+import TemplateRefComponent from "./components/TemplateRefComponent.vue";
 </script>
 
 <template>
@@ -108,6 +111,9 @@ import MultipleSources from "./components/MultipleSources.vue";
   <BasicWatcher />
   <ReactiveObject />
   <MultipleSources />
+  <BasicRef />
+  <FunctionRef />
+  <TemplateRefComponent />
 </template>
 
 <style scoped></style>
